@@ -9,7 +9,7 @@ const toggle=()=>{
 }
 
   return (
-    <div className='min-h-screen bg-gray-100 flex flex-1'>
+    <div className='min-h-screen bg-white flex flex-1'>
       <SideBar isOpen={isOpen} toggle={toggle}/>
 
     <div className='w-full flex-col'>
@@ -25,7 +25,7 @@ const toggle=()=>{
             P
           </section>
         </header>
-        <main className='min-h-screen bg-gray-100 p-2 mx-auto w-full '>
+        <main className='min-h-screen bg-gray-100 p-2  w-full '>
           <Outlet />
         </main>
     </div>
