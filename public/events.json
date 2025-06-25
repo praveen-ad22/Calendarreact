@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Team Meeting",
+    "date": "2025-06-25",
+    "startTime": "10:00",
+    "endTime": "11:00"
+  },
+  {
+    "title": "Doctor Appointment",
+    "date": "2025-06-25",
+    "startTime": "16:00",
+    "endTime": "16:30"
+  },
+  {
+    "title": "Birthday Party",
+    "date": "2025-06-28",
+    "startTime": "18:00",
+    "endTime": "22:00"
+  },
+  {
+    "title": "Visting Temple",
+    "date": "2025-06-25",
+    "startTime": "17:00",
+    "endTime": "17:30"
+  }
+]

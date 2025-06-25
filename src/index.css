@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  /* Removes default margin */
+  padding: 0;
+  /* Removes default padding */
+  box-sizing: border-box;
+  /* Includes border and padding in element's total width/height */
+  font-family: Arial, sans-serif;
+
+  line-height: 1.6;
+  /* Better readability */
+}
+@import "tailwindcss";
