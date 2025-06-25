@@ -1,12 +1,56 @@
-# React + Vite
+# 📅 React Calendar Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive calendar application built with **React**, **Tailwind CSS**, and **Day.js**. Users can view calendar months, add events to specific dates, and navigate between months.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📆 Monthly calendar view
+- 📌 Add and view events on specific dates
+- 📅 Highlight current day
+- 🔁 Navigate between months
+- 📱 Fully responsive UI
+- 🎨 Clean and professional design with Tailwind CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+| Technology     Description |
+||------------------------------------|
+| React           | Frontend framework |
+| React Router    | Client-side routing |
+| Tailwind CSS    | Utility-first CSS framework|
+| Day.js          | Lightweight date utility library|
+
+---
+
+## 🖥️ Screenshots
+
+> *(Add screenshots of your calendar and event modal here)*
+
+---
+
+## 📂 Folder Structure
+
+📁 src/
+│
+├── Components/
+│ ├── Calendar.jsx
+│ ├── Days.jsx
+│ ├── EventDialog.jsx
+│ └── SideBar.jsx
+│
+├── Utils/
+│ └── dateUtils.js
+│
+├── App.jsx
+└── main.jsx
+
+
+---
+
+Live Link
+
+https://calendarreact.onrender.com
