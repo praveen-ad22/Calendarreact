@@ -20,6 +20,18 @@ const Calendar = () => {
         setEvents(updatedEvents);
         localStorage.setItem('events', JSON.stringify(updatedEvents));
     };
+        const onDelete = (eventToDelete) => {
+            const updatedEvents = events.filter(e =>
+                !(
+                    e.title === eventToDelete.title &&
+                    e.date === eventToDelete.date &&
+                    (e.time || e.startTime) === (eventToDelete.time || eventToDelete.startTime)
+                )
+            );
+
+            setEvents(updatedEvents);
+            localStorage.setItem('events', JSON.stringify(updatedEvents));
+        };
 
     const handlePrev = () => setDate(prev => prev.subtract(1, 'month'));
     const handleNext = () => setDate(prev => prev.add(1, 'month'));
@@ -121,6 +133,7 @@ const Calendar = () => {
                 onClose={closeDialog}
                 date={selectedDate}
                 events={getEventsForDate}
+                onDelete={onDelete}
             />
             <AddEventDialog 
             open={isAddDialogOpen}

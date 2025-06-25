@@ -1,8 +1,20 @@
 import React from 'react';
-import { Dialog, DialogTitle, DialogContent, DialogActions, Button, Typography, List, ListItem, ListItemText } from '@mui/material';
 import dayjs from 'dayjs';
+import {
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    Button,
+    Typography,
+    List,
+    ListItem,
+    ListItemText,
+    IconButton,
+} from '@mui/material';
+import DeleteIcon from '@mui/icons-material/Delete'; 
 
-const EventDialog = ({ open, onClose, date, events = [] }) => {
+const EventDialog = ({ open, onClose, date, events = [], onDelete }) => {
     if (!date) return null;
 
     const formatted = dayjs(date).format('dddd, MMMM D, YYYY');
@@ -18,10 +30,22 @@ const EventDialog = ({ open, onClose, date, events = [] }) => {
                 ) : (
                     <List>
                         {events.map((event, idx) => (
-                            <ListItem key={idx} divider>
+                            <ListItem
+                                key={idx}
+                                divider
+                                secondaryAction={
+                                    <IconButton
+                                        edge="end"
+                                        aria-label="delete"
+                                        onClick={() => onDelete(event)}
+                                    >
+                                        <DeleteIcon color="error" />
+                                    </IconButton>
+                                }
+                            >
                                 <ListItemText
                                     primary={event.title}
-                                    secondary={`${event.startTime} - ${event.endTime}`}
+                                    secondary={`${event.startTime || event.time} - ${event.endTime || event.duration}`}
                                 />
                             </ListItem>
                         ))}
@@ -29,7 +53,9 @@ const EventDialog = ({ open, onClose, date, events = [] }) => {
                 )}
             </DialogContent>
             <DialogActions>
-                <Button onClick={onClose} variant="outlined">Close</Button>
+                <Button onClick={onClose} variant="outlined">
+                    Close
+                </Button>
             </DialogActions>
         </Dialog>
     );
